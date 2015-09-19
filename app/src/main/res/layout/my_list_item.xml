@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+        <!-- Circle Thumbnail with Image -->
+    <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+        android:id="@+id/myitemthum"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        bct_minimal="true"
+        bootstrap:bct_size="medium"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/myname"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/mytext"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textIsSelectable="true" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
