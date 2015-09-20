@@ -171,20 +171,26 @@ public class MainActivity extends AppCompatActivity {
     //NavigaterDrawe選択時処理
     protected void selectitem(int position) {
         mDrawerLayout.closeDrawers();
+        Fragment fragment;
         switch (position) {
             case 0:
                 //実行する内容
-                MyDialogShowFragment mainFragment = new MyDialogShowFragment();
-                getFragmentManager().beginTransaction().replace(R.id.container, mainFragment).commit();
+                fragment = new MyDialogShowFragment();
                 break;
             case 1:
                 //実行する内容
-                MyListFragment fragment = new MyListFragment();
-                getFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+                fragment = new MyListFragment();
                 break;
+            case 2:
+                fragment = new WebApiFragment();
             default:
                 return;
         }
+        LinearLayout layout = (LinearLayout)this.findViewById(R.id.container);
+        layout.removeAllViewsInLayout();
+        getFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
     }
 
 }
