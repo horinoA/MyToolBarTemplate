@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 fragment = new WebApiFragment();
+                break;
             default:
                 return;
         }
